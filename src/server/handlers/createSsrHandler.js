@@ -62,8 +62,8 @@ export default function createSsrHandler(template) {
         const state = store.getState();
         const useBeta = getUseBeta(state);
 
-        if (useBeta && req.hostname === 'busy.org') {
-          return res.redirect(`https://staging.busy.org${req.originalUrl}`);
+        if (useBeta && req.hostname === 'STEEMPipe.com') {
+          return res.redirect(`https://staging.STEEMPipe.com${req.originalUrl}`);
         }
 
         const availableLocale = getAvailableLocale(getLocale(state));
@@ -82,7 +82,7 @@ export default function createSsrHandler(template) {
         if (context.status) {
           res.status(context.status);
         }
-        return res.send(renderSsrPage(store, content, template, appUrl !== 'https://busy.org'));
+        return res.send(renderSsrPage(store, content, template, appUrl !== 'https://STEEMPipe.com'));
       })
       .catch(err => {
         Raven.captureException(err);

@@ -75,7 +75,7 @@ class QuickPostEditor extends React.Component {
 
   getQuickPostData = () => {
     const currentPaths = this.props.location.pathname.split('/');
-    const busyTag = 'busy';
+    const STEEMPipeTag = 'steempipe';
     const tag = currentPaths[2];
     const tags = [];
     const images = _.map(this.state.currentImages, image => image.src);
@@ -99,8 +99,8 @@ class QuickPostEditor extends React.Component {
     };
 
     const metaData = {
-      community: 'busy',
-      app: `busy/${version}`,
+        community: 'steempipe',
+        app: `steempipe/${version}`,
       format: 'markdown',
     };
 
@@ -116,7 +116,7 @@ class QuickPostEditor extends React.Component {
 
     metaData.tags = tags;
 
-    data.parentPermlink = _.isEmpty(tag) ? busyTag : tag;
+    data.parentPermlink = _.isEmpty(tag) ? STEEMPipeTag : tag;
     data.permlink = _.kebabCase(postTitle);
     data.jsonMetadata = metaData;
 

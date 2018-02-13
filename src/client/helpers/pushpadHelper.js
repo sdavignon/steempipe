@@ -2,7 +2,7 @@ import fetch from 'isomorphic-fetch';
 
 export const initPushpad = (username, token) => {
   const PUSHPAD_PROJECT_ID = process.env.PUSHPAD_PROJECT_ID;
-  const BUSYPUSH_ENDPOINT = process.env.BUSYPUSH_ENDPOINT;
+  const STEEMPipePUSH_ENDPOINT = process.env.BUSYPUSH_ENDPOINT;
 
   // Do not try to init if Pushpad is not configured
   if (!PUSHPAD_PROJECT_ID || !BUSYPUSH_ENDPOINT) {
@@ -59,7 +59,7 @@ export const initPushpad = (username, token) => {
             return;
           }
 
-          // subscribe username in busy-push to check for its activities in Steem blockchain
+          // subscribe username in STEEMPipe-push to check for its activities in Steem blockchain
           fetch(`${BUSYPUSH_ENDPOINT}/api/subscribe`, {
             method: 'POST',
             headers: {

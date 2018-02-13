@@ -201,7 +201,7 @@ class Write extends React.Component {
     };
 
     // Merging jsonMetadata makes sure that users don't lose any metadata when they edit post using
-    // Busy (like video data from DTube)
+    // STEEMPipe (like video data from DTube)
     if (this.props.draftPosts[this.draftId] && this.props.draftPosts[this.draftId].jsonMetadata) {
       metaData = {
         ...metaData,

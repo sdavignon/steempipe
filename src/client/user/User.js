@@ -130,14 +130,14 @@ export default class User extends React.Component {
     const username = this.props.match.params.name;
     const { user } = this.props;
     const { profile = {} } = user.json_metadata || {};
-    const busyHost = global.postOrigin || 'https://busy.org';
+    const STEEMPipeHost = global.postOrigin || 'https://STEEMPipe.com';
     const desc = profile.about || `Posts by ${username}`;
     const image = getImage(`@${username}`) || '/images/logo.png';
     const canonicalUrl = `${busyHost}/@${username}`;
     const url = `${busyHost}/@${username}`;
     const displayedUsername = profile.name || username || '';
     const hasCover = !!profile.cover_image;
-    const title = `${displayedUsername} - Busy`;
+    const title = `${displayedUsername} - STEEMPipe`;
 
     const isSameUser = authenticated && authenticatedUser.name === username;
 

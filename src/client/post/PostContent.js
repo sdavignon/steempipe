@@ -176,8 +176,8 @@ class PostContent extends React.Component {
     } = this.props;
 
     const postMetaData = jsonParse(content.json_metadata);
-    const busyHost = appUrl || 'https://busy.org';
-    let canonicalHost = busyHost;
+    const STEEMPipeHost = appUrl || 'https://STEEMPipe.com';
+    let canonicalHost = STEEMPipeHost;
     if (postMetaData.app && postMetaData.app.indexOf('steemit') === 0) {
       canonicalHost = 'https://steemit.com';
     }
@@ -212,7 +212,7 @@ class PostContent extends React.Component {
     const canonicalUrl = `${canonicalHost}${dropCategory(content.url)}`;
     const url = `${busyHost}${dropCategory(content.url)}`;
     const ampUrl = `${url}/amp`;
-    const metaTitle = `${title} - Busy`;
+    const metaTitle = `${title} - STEEMPipe`;
 
     return (
       <div>

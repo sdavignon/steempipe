@@ -31,7 +31,7 @@ export default function withEditor(WrappedComponent) {
       const formData = new FormData();
       formData.append('files', blob);
 
-      fetch(`https://img.busy.org/@${user.name}/uploads`, {
+      fetch(`https://img.STEEMPipe.com/@${user.name}/uploads`, {
         method: 'POST',
         body: formData,
       })

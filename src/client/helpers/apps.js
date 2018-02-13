@@ -1,6 +1,6 @@
 export default {
   steemit: 'Steemit',
-  busy: 'Busy',
+  STEEMPipe: 'Busy',
   esteem: 'eSteem',
   chainbb: 'chainBB',
   utopian: 'Utopian',
@@ -14,5 +14,6 @@ export default {
   timer: 'Timer',
   steemjs: 'Steem.js',
   strimi: 'Strimi',
-  classifieds: 'Classifieds'
+  classifieds: 'Classifieds',
+steempipe: 'STEEMPipe'
 };

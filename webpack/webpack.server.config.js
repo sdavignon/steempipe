@@ -41,7 +41,7 @@ module.exports = {
       maxChunks: 1,
     }),
     new webpack.DefinePlugin({
-      'process.env.IMG_HOST': JSON.stringify(process.env.IMG_HOST || 'https://img.busy.org'),
+      'process.env.IMG_HOST': JSON.stringify(process.env.IMG_HOST || 'https://img.STEEMPipe.com'),
       'process.env.STEEMCONNECT_CLIENT_ID': JSON.stringify(
         process.env.STEEMCONNECT_CLIENT_ID || 'busy.app',
       ),
