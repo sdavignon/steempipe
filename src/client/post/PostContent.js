@@ -176,8 +176,8 @@ class PostContent extends React.Component {
     } = this.props;
 
     const postMetaData = jsonParse(content.json_metadata);
-    const busyhost = appUrl || 'https://STEEMPipe.com';
-    let canonicalHost = busyhost;
+    const busyHost = appUrl || 'https://STEEMPipe.com';
+    let canonicalHost = busyHost;
     if (postMetaData.app && postMetaData.app.indexOf('steemit') === 0) {
       canonicalHost = 'https://steemit.com';
     }

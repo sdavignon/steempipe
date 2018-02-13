@@ -130,7 +130,7 @@ export default class User extends React.Component {
     const username = this.props.match.params.name;
     const { user } = this.props;
     const { profile = {} } = user.json_metadata || {};
-    const busyhost = global.postOrigin || 'https://STEEMPipe.com';
+    const busyHost = global.postOrigin || 'https://STEEMPipe.com';
     const desc = profile.about || `Posts by ${username}`;
     const image = getImage(`@${username}`) || '/images/logo.png';
     const canonicalUrl = `${busyHost}/@${username}`;
